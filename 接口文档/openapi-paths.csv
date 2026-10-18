@@ -1,0 +1,369 @@
+﻿method,path,tags,summary,verified,params
+GET,/est/gmInfo/getCartoonUnionData,GM公共信息,孪生联动沙盘初始化数据,,"gameId,round,ruleId,teamId"
+GET,/est/gmInfo/outExcelData,GM公共信息,导出Excel,,"gameId,round,ruleId,year"
+GET,/est/gmInfo/publicMes,GM公共信息,公共信息,,"gameId,round,ruleId,type,year"
+POST,/est/gmWorkbench/capitalInjection,GM工作台,注资,教师端 注资,
+GET,/est/gmWorkbench/findProductAndMaterial,GM工作台,查询产品和原材料列表,,"gameId,groupNum,ruleId"
+GET,/est/gmWorkbench/findTeamCash,GM工作台,查询当前组的资金,,"gameId,teamId"
+GET,/est/gmWorkbench/findTeamList,GM工作台,查询小组下拉框数据,,"gameId,groupNum"
+POST,/est/gmWorkbench/updateData,GM工作台,数据调整,,"carbonCaps,cash,inventory"
+GET,/est/gmSpecialEvent/find,GM工作台-特殊事件,查询特殊事件,,gameId
+POST,/est/gmSpecialEvent/save,GM工作台-特殊事件,开启特殊事件,,"createTime,creator,duration,gameId,id,modifier,modifyTime,round,state,type"
+GET,/est/gmSys/checkReport,GM工作台-系统公告,系统公告-下发公告-校验报表,,"gameId,round"
+GET,/est/gmSys/enterpriseReport,GM工作台-系统公告,企业报表,,"gameId,round"
+GET,/est/gmSys/getAdvertisingList,GM工作台-系统公告,获取本年广告,,"gameId,round,ruleId,teamId,year"
+POST,/est/gmSys/getMsgPrompt,GM工作台-系统公告,查询消息提示,,
+POST,/est/gmSys/getSystemBulletin,GM工作台-系统公告,查询系统公告,,"page,size,teamId"
+POST,/est/gmSys/issuedAnnouncement,GM工作台-系统公告,系统公告-下发公告,,
+GET,/est/gmSys/oneKeyDownload,GM工作台-系统公告,一键下发,,"gameId,round,ruleId"
+GET,/est/gmSys/oneKeyExport,GM工作台-系统公告,一键导出包生成,,"gameId,round,ruleId,year"
+POST,/est/gmSys/selectReport,GM工作台-系统公告,系统公告-报表填写查询,,
+POST,/est/gmSys/sendMessage,GM工作台-系统公告,系统公告-发送,,
+POST,/est/gmSys/updateRuleSentNotifyToStudent,GM工作台-系统公告,修改规则发送通知给学生,,
+GET,/est/gmOrder/getGmOrder,GM工作台-订货会,查询订货会信息,◐ 订货会状态,"gameId,round"
+GET,/est/gmOrder/getGoDuration,GM工作台-订货会,查询订货会已开启的时间（毫秒）,,"gameId,round"
+GET,/est/gmOrder/getOrderRuleByRound,GM工作台-订货会,查询当前回合是否可以开启订货会,,"round,ruleId"
+POST,/est/gmOrder/saveOrder,GM工作台-订货会,开启订货会,,
+POST,/est/gmOrder/updateState,GM工作台-订货会,结束订货会,,
+POST,/est/gmMenu/checkMenuIsOpen,GM工作台-选单,能否开启选单,,
+POST,/est/gmMenu/getMenuPhase,GM工作台-选单,查询当前选单阶段,,
+POST,/est/gmMenu/getTeamPutAdvertising,GM工作台-选单,通过实训ID查询分组投放广告情况,,
+POST,/est/gmMenu/saveMenu,GM工作台-选单,开启选单,,
+POST,/est/gmMenu/sendAdvertising,GM工作台-选单,下发广告通知,,
+POST,/est/gmMenu/updateMenuState,GM工作台-选单,切换选单阶段,,
+GET,/est/rule/init-iso/getById,ISO资质初始,"简要说明, wangye, 2021-07-22",,id
+DELETE,/est/,application,index,,
+GET,/est/,application,index,,
+POST,/est/,application,index,,
+PUT,/est/,application,index,,
+DELETE,/est/error,basic-error-controller,errorHtml,,
+GET,/est/error,basic-error-controller,errorHtml,,
+POST,/est/error,basic-error-controller,errorHtml,,
+PUT,/est/error,basic-error-controller,errorHtml,,
+GET,/est/round/checkSubmit,est回合数据,提交报表验证,,"gameId,round"
+POST,/est/round/next,est回合数据,下一回合,,teamId
+POST,/est/round/previous,est回合数据,上一回合,,teamId
+POST,/est/round/start,est回合数据,开始回合,,"iso,market,product"
+POST,/est/product/rule/dealerOrder/import,est规则逻辑,智能生成规则数据,,
+POST,/est/product/rule/intelligence/data,est规则逻辑,智能生成规则数据,,
+GET,/est/portal/IdeologicalBoard,est门户,思政看板,,"checkType,gameId,round,ruleId,teamId"
+POST,/est/portal/afforestation,est门户,植树造林,,
+POST,/est/portal/buyData,est门户,购买材料,,"featuresCode,number"
+GET,/est/portal/checkInformation,est门户,查看已购买情报,,"checkType,gameId,group,round,ruleId,teamId"
+GET,/est/portal/combobox,est门户,数据咨询下拉框,,"gameId,round,teamId"
+POST,/est/portal/donations,est门户,捐款,,
+GET,/est/portal/getDetailList,est门户,数据咨询下拉框,,
+GET,/est/portal/getFeatures,est门户,查询特性下拉框,,ruleId
+GET,/est/portal/getIntelligenceCost,est门户,查询情报费,◐ 数智化费用,ruleId
+GET,/est/portal/getNeutralization,est门户,获取中和量,,"gameId,round,teamId"
+POST,/est/portal/portalBusinessRanking,est门户,经营排行,,
+POST,/est/portal/portalMarketSurvey,est门户,市场调研,,
+POST,/est/portal/portalOperateReport,est门户,经营报告,,
+POST,/est/portal/purchaseInformation,est门户,购买数据情报,,
+GET,/est/portal/smartDecision,est门户,智能决策,,"decisionType,gameId,round,teamId"
+GET,/est/portal/teamList/withoutName,est门户,查询小组列表,,gameId
+GET,/est/portal/tradingMarket,est门户,交易市场,◐ 交易市场,"checkType,gameId,ruleId"
+DELETE,/est/metrics/health,health,health,,
+GET,/est/metrics/health,health,health,,
+POST,/est/metrics/health,health,health,,
+PUT,/est/metrics/health,health,health,,
+GET,/est/rule/iso/getById,rule-iso-controller,"简要说明, wangye, 2021-06-18",,id
+GET,/est/rule/iso/getIso,rule-iso-controller,获取iso规则,,ruleId
+DELETE,/est/service.alive,service-controller,serviceAlive,,configName
+GET,/est/service.alive,service-controller,serviceAlive,,configName
+POST,/est/service.alive,service-controller,serviceAlive,,configName
+PUT,/est/service.alive,service-controller,serviceAlive,,configName
+DELETE,/est/service.config.get,service-controller,getConfig,,configName
+GET,/est/service.config.get,service-controller,getConfig,,configName
+POST,/est/service.config.get,service-controller,getConfig,,configName
+PUT,/est/service.config.get,service-controller,getConfig,,configName
+DELETE,/est/cto/equipment/smart/openSmartProduction,smart-production-controller,"开启智能生产, ysl, 2021-08-5",✅ 开产,
+GET,/est/cto/equipment/smart/openSmartProduction,smart-production-controller,"开启智能生产, ysl, 2021-08-5",✅ 开产,"caseId,equipmentProducts,gameId,rotaId,round,ruleId,teamId,userId"
+POST,/est/cto/equipment/smart/openSmartProduction,smart-production-controller,"开启智能生产, ysl, 2021-08-5",✅ 开产,
+PUT,/est/cto/equipment/smart/openSmartProduction,smart-production-controller,"开启智能生产, ysl, 2021-08-5",✅ 开产,
+GET,/est/cto/equipment/smart/smartProductionList,smart-production-controller,"智能生产列表, ysl, 2021-08-5",,"gameId,round,ruleId,teamId"
+GET,/est/dataGroundingState/getList,上架状态表,获取网络投放和新媒体广告内容,,"gameId,round,ruleId,teamId"
+GET,/est/dataGroundingState/getListByTeacher,上架状态表,补单单号下拉框-教师端,,"round,ruleId"
+GET,/est/dataGroundingState/getNetWorkList,上架状态表,获取网络营销列表-教师端,,"gameId,round"
+GET,/est/dataGroundingState/getNetWorkListByStu,上架状态表,获取网络营销列表-学生端,,"gameId,round"
+POST,/est/dataGroundingState/saveADNetwork,上架状态表,网络投放,,
+POST,/est/dataGroundingState/saveNewMedia,上架状态表,新媒体广告投放,,cash
+POST,/est/budget/temporary/apply,临时预算审批,申请临时预算,✅ 临时预算申请,
+POST,/est/budget/temporary/approve,临时预算审批,临时预算审批,✅ 临时预算审批,
+GET,/est/budget/temporary/list,临时预算审批,查询未处理的预算申请,,"gameId,round,teamId"
+GET,/est/rule/init-product/getById,产品初始,"简要说明, wangye, 2021-07-22",,id
+GET,/est/ruleProductDesign/getById,产品设计,"简要说明, wangye, 2021-07-15",,id
+GET,/est/ruleProductDesign/getList,产品设计,获取特性名称下拉框,,ruleId
+GET,/est/rule/product-qualifications/getById,产品资质,"简要说明, wangye, 2021-07-21",,id
+GET,/est/rule/init-product-qualifications/getById,产品资质初始表,"简要说明, wangye, 2021-07-21",,id
+POST,/est/hrd/batchIncentive,人力,员工批量涨薪(激励),,
+POST,/est/hrd/changeOffer,人力,"修改offer, tc, 2021-07-13",,
+GET,/est/hrd/checkThis,人力,智能筛选，点击这里,,"currentPage,gameId,pageSize,round,ruleId,teamId"
+GET,/est/hrd/dataPanel,人力,大数据看板,,"bottomOne,bottomThree,bottomTwo,centerOne,centerThree,centerTwo,gameId,round,teamId,topFour,topOne,topThree,topTwo,queryCode"
+POST,/est/hrd/dismissal,人力,"解聘, ysl, 2021-07-14",,
+POST,/est/hrd/employeeIncentive,人力,"员工激励, tc, 2021-07-29",,
+GET,/est/hrd/employeeList,人力,"本回合员工在职列表, ysl, 2021-07-12",✅ 员工名册,"gameId,page,round,size,teamId"
+GET,/est/hrd/employeeTalList,人力,"员工人才列表, tc, 2021-07-29",,"gameId,round,teamId"
+POST,/est/hrd/ensure,人力,确认激励(批量),,
+GET,/est/hrd/findOffer,人力,"查看offer, tc, 2021-07-13",,"employeeAccount,gameId,round,teamId"
+GET,/est/hrd/getCompanyName,人力,"获取企业名称, tc, 2021-08-03",,"gameId,teamId"
+GET,/est/hrd/getHrdList,人力,"获取人力资源市场列表, tc, 2021-07-13",✅ 人才市场,"currentPage,gameId,pageSize,round,ruleId,teamId"
+GET,/est/hrd/getRecruitList,人力,"获取人力资源需求列表, tc, 2021-07-14",,"currentPage,gameId,pageSize,round,teamId"
+POST,/est/hrd/increaseSalary,人力,"员工涨薪, tc, 2021-07-29",,
+POST,/est/hrd/payday,人力,"发薪, ysl, 2021-07-13",✅ 发薪,employeeCodes
+GET,/est/hrd/paydayCash,人力,"获取员工发薪金额, ysl, 2021-07-13",✅ 应发工资,"employeeCodes,gameId,round,teamId"
+POST,/est/hrd/sendOffer,人力,"发送offer, tc, 2021-07-13",✅ 发 offer,
+POST,/est/hrd/smarScreening,人力,"智能筛选, tc, 2021-08-03",,"currentPage,pageSize"
+POST,/est/hrd/smartSalary,人力,"智能定薪, tc, 2021-08-03",,
+GET,/est/health,健康检查,健康检查,,
+GET,/est/initBanlanceSheet/getAdvertisingAnalysis,初始资产负债表,经营分析-广告产出比分析,,"gameId,teamIds"
+GET,/est/initBanlanceSheet/getCapacityAnalysis,初始资产负债表,经营分析-产能分析,,"gameId,round,teamIds"
+GET,/est/initBanlanceSheet/getCostProfit,初始资产负债表,经营分析-成本利润率,,"gameId,teamIds"
+GET,/est/initBanlanceSheet/getDataBanlance,初始资产负债表,财务报表-资产负债表,,"gameId,round,teamId,year"
+GET,/est/initBanlanceSheet/getDataCash,初始资产负债表,财务报表-现金流量表,,"gameId,teamId,year"
+GET,/est/initBanlanceSheet/getDataCostInfo,初始资产负债表,财务报表-综合费用表,,"gameId,round,teamId,year"
+GET,/est/initBanlanceSheet/getDataProfit,初始资产负债表,财务报表-利润表,,"gameId,round,teamId,year"
+GET,/est/initBanlanceSheet/getEarningsAnalysis,初始资产负债表,经营分析-收益能力分析,,"gameId,teamIds"
+GET,/est/initBanlanceSheet/getFinancialIndicators,初始资产负债表,财务报表-财务指标(年),,"gameId,round,teamId,year"
+GET,/est/initBanlanceSheet/getLiabilitiesAnalysis,初始资产负债表,经营分析-负债分析,,"gameId,teamIds"
+GET,/est/initBanlanceSheet/getList,初始资产负债表,获取资产负债表,✅ 期初/期末报表数据,"gameId,round,teamId"
+GET,/est/initBanlanceSheet/getMarketShare,初始资产负债表,经营分析-市场占有率,,"gameId,round"
+GET,/est/initBanlanceSheet/getOrderAnalysis,初始资产负债表,经营分析-订单获取交付分析,,"gameId,round,teamIds"
+GET,/est/initBanlanceSheet/getTeamList,初始资产负债表,经营分析-队伍下拉框,,gameId
+GET,/est/initBanlanceSheet/updateCarbon,初始资产负债表,修改产线和产品排放量,,ruleId
+GET,/est/rule/init-banlance-sheet/getById,初始资产负债表,"简要说明, wangye, 2021-07-22",,id
+POST,/est/cfoInitBanlanceSheet/saveCfoInitBanlanceSheet,初始资产负债表(学生录入),保存学生录入数据,,"assetsTotal,cash,constructProject,createTime,creator,finishedProduct,fixedAssestsTotal,gameId,id,liabilitiesEquityTotal,liabilitiesTotal,liquidAssetsTotal,longTermLiabilites,makingProduct,material,modifier,modifyTime,otherPayable,ownerEquityTotal,realEstate,receivable,retainProfits,round,shareholderCapital,shortTermLiabiltes,state,tax,teamId,yearProfits"
+GET,/est/dataProfit/getList,利润信息表,获取利润表,✅ 利润表数据,"gameId,round,teamId"
+POST,/est/cfoInitProfit/saveCfoInitBanlanceSheet,利润表(学生录入),保存学生录入数据,,"administrativeExpense,createTime,creator,deprecition,directCost,ebitda,financeCharge,financeCost,gameId,grossProfit,id,incomeTaxes,modifier,modifyTime,netIncome,netRevenues,profitBeforeInterest,profitBeforeTax,round,state,teamId"
+GET,/est/rule/init-material/getById,原材料初始表,"简要说明, wangye, 2021-07-22",,id
+GET,/est/rule/init-employee/getById,员工初始表,"简要说明, wangye, 2021-07-22",,id
+GET,/est/hrd/training/getById,员工培训记录表,"简要说明, wangye, 2021-07-20",,id
+GET,/est/rule/employee-incentive/getById,员工激励,"简要说明, wangye, 2021-07-15",,id
+GET,/est/dataDeductionGoodwill/getById,商誉扣除明细表,"简要说明, cuijw, 2023-01-31",,id
+GET,/est/dataDeductionGoodwill/getList,商誉扣除明细表,获取扣除商誉表,✅ 商誉扣分,"gameId,teamId"
+GET,/est/hrd/train/getById,培训规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/hrd/train/list,培训规则,培训管理,,"gameId,page,round,ruleId,size,teamId,type"
+POST,/est/hrd/train/training,培训规则,培训,,
+GET,/est/rule/train/getById,培训规则,"简要说明, wangye, 2021-07-15",,id
+POST,/est/rule/train/training,培训规则,培训,,
+POST,/est/rule/basic/aiCreateRule,基础规则,ai制题,,"isHasInitialData,market,feeState,newRuleId,marketSize"
+GET,/est/rule/basic/getById,基础规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/bigDataBroad/getAll,大数据看板,财务大数据-打开页面,,"codeFour,codeOne,codeSecondL,codeSecondM,codeSecondR,codeThirdL,codeThirdM,codeThirdR,codeThree,codeTwo,gameId,round,ruleId,teamId,userType"
+GET,/est/bigDataBroad/getListValue,大数据看板,大数据-t1-4,,"code,gameId,round,teamId,userType"
+GET,/est/bigDataBroad/getSecondL,大数据看板,大数据-second_L,,"code,gameId,round,ruleId,teamId,userType"
+GET,/est/bigDataBroad/getSecondM,大数据看板,大数据-second_M,,"code,gameId,round,teamId,userType"
+GET,/est/bigDataBroad/getSecondR,大数据看板,大数据-second_R,,"code,gameId,round,ruleId,teamId,userType"
+GET,/est/bigDataBroad/getThirdL,大数据看板,大数据-third_L,,"code,gameId,round,teamId,userType"
+GET,/est/bigDataBroad/getThirdM,大数据看板,大数据-third_M,,"code,gameId,round,ruleId,teamId,userType"
+GET,/est/bigDataBroad/getThirdR,大数据看板,大数据-third_R,,"code,gameId,round,ruleId,teamId,userType"
+GET,/est/financial/checkFinancial,学生财务指标,"校验财务指标, ysl, 2022-12-05",,"gameId,round,teamId"
+POST,/est/financial/financialSave,学生财务指标,"财务指标保存, ysl, 2022-12-05",,"assetLiabilitiesRatio,assetReturnRatio,capitalMaintenanceAddRatio,cashTurnoverPeriod,costExpenseRatio,currentRatio,gameId,id,inventoryTurnoverFate,inventoryTurnoverRate,netOperatingProfit,netWorthYieldRatio,propertyRightRatio,quickFreezingRatio,receivableTurnoverFate,receivableTurnoverRate,round,state,takingAddRatio,teamId,totalAssetsAddRatio,userId"
+GET,/est/financial/getFinancial,学生财务指标,"获取财务指标, ysl, 2022-12-05",,"gameId,round,teamId,year"
+GET,/est/financial/getStuFinancial,学生财务指标,"老师端获取财务指标（年）, ysl, 2022-12-05",,"gameId,round,teamId,year"
+GET,/est/cfo/company/get,实训企业信息,查询企业信息,,"gameId,teamId"
+GET,/est/cfo/company/getById,实训企业信息,查询企业名称,,id
+GET,/est/cfo/company/getCfoTeam,实训企业信息,财务报表-队伍下拉框,,"gameId,round"
+GET,/est/cfo/company/getGoodwillTeam,实训企业信息,教师端-查询商誉下拉框,,gameId
+GET,/est/cfo/company/getNetWorkTeam,实训企业信息,教师端-查询网络营销下拉框,,"round,ruleId"
+POST,/est/cfo/company/save,实训企业信息,保存企业信息,,
+GET,/est/ruleMarket/getList,市场开拓规则,获取广告投放列表,✅ 市场列表,"gameId,round,ruleId,teamId,userId"
+POST,/est/ruleMarket/saveAdvertisement,市场开拓规则,广告投放,◐ 广告写入,id
+GET,/est/rule/init-market/getById,市场资质初始,"简要说明, wangye, 2021-07-22",,id
+GET,/est/cooAdvertising/exportAllTeamAdvertising,广告投放,下载所有组广告投放数据,,"gameId,round,ruleId,source"
+GET,/est/cooAdvertising/getAdvertising,广告投放,查询小组广告投放,✅ 广告/选单窗口（窗口外 500）,"gameId,round,ruleId,teamId"
+POST,/est/cooAdvertising/saveAdvertising,广告投放,保存|提交广告投放,,
+GET,/est/cooAdvertisingtest/getAdvertising,广告投放,查询小组广告投放,,"gameId,round,teamId"
+GET,/est/cooAdvertisingtest/getAdvertisingById,广告投放,查询小组广告投放,,id
+GET,/est/cooAdvertisingtest/saveAdvertising,广告投放,保存广告投放,,"territory,cost,status,submitTime"
+GET,/est/dataTradeAccount/getDiscount,应收（应付）账款,获取贴息利率,◐ 贴现查询,"paymentData,round,ruleId"
+GET,/est/dataTradeAccount/getPaymentList,应收（应付）账款,应付账款列表,✅ 应付,"gameId,round,teamId"
+GET,/est/dataTradeAccount/getReceivedList,应收（应付）账款,应收账款列表,✅ 应收,"gameId,round,teamId"
+POST,/est/dataTradeAccount/saveDiscount,应收（应付）账款,贴现,◐ 贴现（待实测）,
+POST,/est/dataTradeAccount/updateAllPayment,应收（应付）账款,批量付款,,
+POST,/est/dataTradeAccount/updateDataTradeAccount,应收（应付）账款,收款,,
+POST,/est/dataTradeAccount/updateDataTradeAccountsByRound,应收（应付）账款,收当期所有应收款,,
+POST,/est/dataTradeAccount/updatePayment,应收（应付）账款,付款,✅ 付应付,
+GET,/est/rule/draw-volume/getById,引流参数规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/score/getTeamScoreList,得分api,获取实训得分,✅ 评分列表,"gameId,round"
+GET,/est/score/getTrainingTeamScore,得分api,获取实训小组得分,,json
+GET,/est/board/temp/balanceSheet,手工盘操作,查询资产负债表,,"gameId,round,ruleId,teamId"
+POST,/est/board/temp/card/move,手工盘操作,移动卡片位置,,dataId
+POST,/est/board/temp/dev/equipment/delete,手工盘操作,生产_研发中心_删除产线,,equipmentId
+POST,/est/board/temp/dev/equipment/employee/rel,手工盘操作,生产_研发中心_工人上线,,equipmentId
+POST,/est/board/temp/dev/equipment/featureRel,手工盘操作,生产_研发中心_图纸进入产线,,equipmentId
+POST,/est/board/temp/dev/equipment/netWorth/save,手工盘操作,生产_研发中心_产线净值录入,,"actualOutput,equipmentId,finishRound,inTheProducts,netWorth,state"
+POST,/est/board/temp/dev/equipment/put,手工盘操作,生产_研发中心_产线放置,,
+POST,/est/board/temp/dev/featureLevel/update,手工盘操作,生产_研发中心_特性级别更新,,featureLevel
+POST,/est/board/temp/dev/fpInventory/delete,手工盘操作,生产_成品库_库存删除,,dataId
+POST,/est/board/temp/dev/fpInventory/put,手工盘操作,生产_成品库_产品卡放置,,
+POST,/est/board/temp/dev/fpInventory/save,手工盘操作,生产_成品库_保存数量&价值,,"quantity,totalValue"
+GET,/est/board/temp/dev/get,手工盘操作,生产_盘面数据,,"gameId,round,teamId"
+POST,/est/board/temp/dev/produceDesign/delete,手工盘操作,生产_研发中心_删除图纸,,dataId
+POST,/est/board/temp/dev/produceDesign/put,手工盘操作,生产_研发中心_图纸放置,,
+POST,/est/board/temp/dev/produceDesign/update,手工盘操作,生产_研发中心_设置图纸特性,,dataId
+POST,/est/board/temp/dev/rmInventory/delete,手工盘操作,生产_原料库_库存删除,,dataId
+POST,/est/board/temp/dev/rmInventory/put,手工盘操作,生产_原料库_原料订单卡放置,,
+POST,/est/board/temp/dev/rmInventory/save,手工盘操作,生产_原料库_保存数量&价值,,"quantity,totalValue"
+POST,/est/board/temp/finance/amount/delete,手工盘操作,财务_管理中心_卡片删除,,dataId
+POST,/est/board/temp/finance/amount/put,手工盘操作,财务_管理中心_卡片放置,,
+POST,/est/board/temp/finance/amount/save,手工盘操作,财务_管理中心_金额录入,,amount
+POST,/est/board/temp/finance/budget/save,手工盘操作,财务_部门预算控制,,deptBudget
+POST,/est/board/temp/finance/cash/save,手工盘操作,财务_总资产设置,,"amount,dataId"
+GET,/est/board/temp/finance/cashBudget/get,手工盘操作,财务_总资产预算查询,,"gameId,round,teamId"
+GET,/est/board/temp/finance/get,手工盘操作,财务_管理中心_盘面数据,,"gameId,round,teamId"
+GET,/est/board/temp/getCartoonInitData,手工盘操作,查询孪生沙盘动画初始化数据,,"gameId,round,teamId"
+POST,/est/board/temp/hrd/employee/dismiss,手工盘操作,人力_工人_离职,,
+POST,/est/board/temp/hrd/employee/entry,手工盘操作,人力_工人_正式入职,,
+GET,/est/board/temp/hrd/employee/offerList,手工盘操作,人力_工人_在招列表,,"gameId,round,teamId"
+GET,/est/board/temp/hrd/employee/onJobList,手工盘操作,人力_工人_在职列表,,"gameId,round,teamId"
+POST,/est/board/temp/hrd/offer/delete,手工盘操作,人力_工人_收回offer,,id
+POST,/est/board/temp/hrd/offer/send,手工盘操作,人力_工人_发送offer,,
+GET,/est/board/temp/hrd/ruleEmployee/list,手工盘操作,人力_员工_初始市场列表,,"gameId,round,ruleId,teamId"
+GET,/est/board/temp/market/applyOrder/list,手工盘操作,营销_竞单_已申报订单列表,,"gameId,round,teamId"
+POST,/est/board/temp/market/certAuth/delete,手工盘操作,营销_资质认证_删除,,dataId
+POST,/est/board/temp/market/certAuth/money,手工盘操作,营销_资质认证_广告投放,,money
+POST,/est/board/temp/market/certAuth/put,手工盘操作,营销_资质认证_卡片放置,,
+POST,/est/board/temp/market/certAuth/save,手工盘操作,营销_资质认证_状态设置,,"dataId,finishRound,state"
+GET,/est/board/temp/market/deliveryOrder/list,手工盘操作,营销_竞单_订单交付列表,,"gameId,round,teamId"
+POST,/est/board/temp/market/deliveryOrder/update,手工盘操作,营销_竞单_修改订单交付状态,,costPrice
+GET,/est/board/temp/market/get,手工盘操作,营销_盘面数据,,"gameId,round,teamId"
+POST,/est/board/temp/market/ruleOrder/apply,手工盘操作,营销_竞单列表_订单申请,✗ 错误接口（不落库）,"accountDate,deliveryDate,featureCode,featureName,isoName,marketCode,marketName,productCode,productName,quantity,referencePrice"
+GET,/est/board/temp/market/ruleOrder/list,手工盘操作,营销_竞单列表_经销商规则订单,✅ 订单池（读）,"productCode,round,ruleId"
+GET,/est/board/temp/operateRecord/list,手工盘操作,教师端_摆盘操作记录查询,,"gameId,teamId"
+POST,/est/board/temp/order/distribution/auto,手工盘操作,教师端_订单分配_自动,,
+POST,/est/board/temp/order/distribution/manual,手工盘操作,教师端_订单分配_手动,,
+POST,/est/board/temp/reset,手工盘操作,一键清盘,,
+POST,/est/board/temp/round/change,手工盘操作,教师端_切换回合,,
+GET,/est/board/temp/system/contrast,手工盘操作,一键查盘,,"gameId,round,ruleId,teamNum"
+GET,/est/board/temp/team/applyOrder/list,手工盘操作,教师端_订单分配_列表查询,,"gameId,round"
+GET,/est/cfo/cfo-vote/getById,投票记录表,"简要说明, cuijw, 2023-07-06",,id
+GET,/est/cfoReport/checkSubmit,报表(学生录入),提交报表验证,✅ 报表提交验证,"gameId,round,teamId"
+GET,/est/cfoReport/getData,报表(学生录入),获取费用学生录入数据,✅ 报表数据,"costId,gameId,profitId,round,sheetId,teamId"
+GET,/est/cfoReport/getSystemReportData,报表(学生录入),获取系统报表数据,✅ 系统报表数据,"gameId,round,teamId"
+POST,/est/cfoReport/saveData,报表(学生录入),保存费用学生录入数据,✅ 报表保存/提交,"additionalMaterial,administrative,administrativeExpense,advertise,assetLiabilitiesRatio,assetReturnRatio,assetsTotal,capitalMaintenanceAddRatio,carbonCapsCost,cash,cashTurnoverPeriod,certificationApply,constructProject,conversion,costExpenseRatio,costId,costTotal,currentRatio,deprecition,digital,directCost,ebitda,financeCharge,financeCost,finishedProduct,fixedAssestsTotal,grossProfit,human,incentive,incomeTaxes,intelligenceFee,inventoryTurnoverFate,inventoryTurnoverRate,liabilitiesEquityTotal,liabilitiesTotal,liquidAssetsTotal,longTermLiabilites,makingProduct,marketDevelop,material,netIncome,netOperatingProfit,netRevenues,netWorthYieldRatio,otherPayable,ownerEquityTotal,productDesign,productDevelop,productLineMaintenance,profitBeforeInterest,profitBeforeTax,profitId,propertyRightRatio,qualificationsApply,quickFreezingRatio,realEstate,receivable,receivableTurnoverFate,receivableTurnoverRate,retainProfits,shareholderCapital,sheetId,shortTermLiabiltes,state,submitState,takingAddRatio,tax,terminationBenefits,totalAssetsAddRatio,training,userId,yearProfits"
+GET,/est/swsearch/findByIdList,搜索管理,点击标题名称返回id查询标题内容,,id
+GET,/est/swsearch/findList,搜索管理,模糊查询,,title
+GET,/est/data/digitalCost,数字化解锁记录表,数字化消耗,,"gameId,round,ruleId,teamId,type"
+POST,/est/data/digitalUnlock,数字化解锁记录表,数字化解锁,,
+GET,/est/rule/rule-digital-speed/getById,数字化速度,"简要说明, wangye, 2021-08-03",,id
+GET,/est/dataCashFlow/getList,现金流量表,获取现金流量表,✅ 现金流明细,"gameId,teamId"
+GET,/est/rule/rota/getById,班次规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/rule/rota/getList,班次规则,获取下拉列表,,ruleId
+GET,/est/cto/feature/list,生产总监-产品特性开发,产品特性与当前状态列表,,"gameId,round,ruleId,teamId"
+POST,/est/cto/feature/save,生产总监-产品特性开发,产品特性研发,,
+GET,/est/cto/design/data,生产总监-产品设计管理(产品关联特性),产品设计页面显示数据,,"gameId,round,ruleId,teamId"
+POST,/est/cto/design/design,生产总监-产品设计管理(产品关联特性),产品设计,✅ 产品设计,
+GET,/est/cto/design/history,生产总监-产品设计管理(产品关联特性),历史版本查询,,"gameId,pageIndex,pageSize,teamId"
+GET,/est/cto/employee/column/list,生产总监-工人管理,查询表格动态列及班次规则,✅ 班次,ruleId
+GET,/est/cto/employee/list,生产总监-工人管理,查询在职工人列表,,"gameId,pageIndex,pageSize,round,ruleId,teamId"
+GET,/est/cto/employee/output/list,生产总监-工人管理,查询设备列表,✅ 派工数据,"gameId,pageIndex,pageSize,round,teamId"
+POST,/est/cto/employee/output/save,生产总监-工人管理,工人班次产量保存,✅ 派工,baseOutput
+POST,/est/cto/employee/recruit/save,生产总监-工人管理,招聘需求填报,,
+GET,/est/cto/employee/rule/list,生产总监-工人管理,查询员工等级列表,,ruleId
+GET,/est/cto/employee/type/list,生产总监-工人管理,查询普通/高级工人列表,✅ 可派工人,"gameId,round,teamId"
+POST,/est/cto/equipment/dismantling,生产总监-设备管理,"设备拆除, ysl, 2021-08-3",,
+POST,/est/cto/equipment/equipmentOpenToProduce,生产总监-设备管理,"设备开产, ysl, 2021-07-29",,
+POST,/est/cto/equipment/equipmentSwitchToProduce,生产总监-设备管理,"设备转产, ysl, 2021-07-29",,
+GET,/est/cto/equipment/list,生产总监-设备管理,查询设备列表,✅ 产线,"gameId,pageIndex,pageSize,round,ruleId,teamId"
+GET,/est/cto/equipment/rule/list,生产总监-设备管理,查询设备规则列表,,
+GET,/est/cto/equipment/rule/select,生产总监-设备管理,查询规则枚举,,ruleId
+GET,/est/cto/equipment/ruleProductList,生产总监-设备管理,"产品列表, ysl, 2021-08-24",,ruleId
+POST,/est/cto/equipment/save,生产总监-设备管理,新增设备,✅ 建线,postId
+POST,/est/cto/equipment/updateBom,生产总监-设备管理,更新BOM,,
+GET,/est/rule/init-production-line/getById,生产线规则,"简要说明, wangye, 2021-07-22",,id
+GET,/est/rule/production-line/getById,生产线规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/data/dataManagementTool/checkVote,管理工具表,查看当前人员是否投过票,,"gameId,teamId,userId"
+POST,/est/data/dataManagementTool/delete,管理工具表,删除,,
+GET,/est/data/dataManagementTool/getManagementGroup,管理工具表,查询名义群体法,,"gameId,teamId"
+GET,/est/data/dataManagementTool/getManagementTool,管理工具表,查询管理工具,,"gameId,teamId,type"
+GET,/est/data/dataManagementTool/getRealTimeDesk,管理工具表,实时盘面,,"gameId,round,teamId"
+GET,/est/data/dataManagementTool/getRealTimeDeskToCompare,管理工具表,实时盘面-横向对比,,"gameId,round,type"
+POST,/est/data/dataManagementTool/save,管理工具表,保存管理工具,,id
+POST,/est/data/dataManagementTool/vote,管理工具表,投票,,
+GET,/est/ruleDealerOrder/checkOrder,经销商订单表,查询经销商订单表,,ruleId
+GET,/est/ruleDealerOrder/copyOrder,经销商订单表,复制经销商订单表,,"newRuleId,ruleId"
+GET,/est/ruleDealerOrder/exportOrder,经销商订单表,导出经销商订单表,,ruleId
+GET,/est/ruleDealerOrder/getList,经销商订单表,竞单申报列表,,"gameId,round,ruleId,teamId"
+GET,/est/ruleDealerOrder/getMarket,经销商订单表,市场下拉框,,"gameId,ruleId"
+GET,/est/ruleDealerOrder/getMenuDetail,经销商订单表,订单明细(选单),,"gameId,markId,productId,round,ruleId,teamId"
+GET,/est/ruleDealerOrder/getOrderDetail,经销商订单表,订单明细(竞单),,"gameId,markId,productId,round,ruleId,teamId"
+GET,/est/ruleDealerOrder/getOrderTeam,经销商订单表,队伍下拉框,,gameId
+GET,/est/ruleDealerOrder/getProduct,经销商订单表,产品下拉框,,"gameId,ruleId"
+GET,/est/ruleDealerOrder/getQuarter,经销商订单表,季度下拉框,,"gameId,ruleId"
+POST,/est/ruleDealerOrder/importOrder,经销商订单表,导入经销商订单表,,file
+POST,/est/md/applyForIsoCertification,营销,"申请ISO认证, ysl, 2021-07-19",✅ ISO 申请,isoId
+DELETE,/est/md/applyForProductQualification,营销,"申请产品资质, ysl, 2021-07-28",✅ 产品资质申请,productId
+GET,/est/md/applyForProductQualification,营销,"申请产品资质, ysl, 2021-07-28",✅ 产品资质申请,"creator,gameId,productId,round,ruleProductId,teamId"
+POST,/est/md/applyForProductQualification,营销,"申请产品资质, ysl, 2021-07-28",✅ 产品资质申请,productId
+PUT,/est/md/applyForProductQualification,营销,"申请产品资质, ysl, 2021-07-28",✅ 产品资质申请,productId
+GET,/est/md/channelRulesList,营销,"渠道(市场)规则, ysl, 2021-07-19",,"page,ruleId,size"
+GET,/est/md/dataIsolList,营销,"ISO管理, ysl, 2021-07-19",✅ ISO,"gameId,page,round,ruleId,size,teamId"
+GET,/est/md/dataProductStateList,营销,"产品资质管理, ysl, 2021-07-28",✅ 产品资质,"gameId,page,round,ruleId,size,teamId"
+POST,/est/md/delMaterialOrder,营销,删除原材料订单,,
+POST,/est/md/developSaleChannel,营销,"开拓渠道, ysl, 2021-07-19",✅ 渠道开拓,channelId
+GET,/est/md/materialList,营销,"原材料商店列表, tc, 2021-07-19",,"currentPage,gameId,pageSize,ruleId"
+GET,/est/md/orderList,营销,"订单列表, tc, 2021-07-19",✅ 订料订单,"currentPage,gameId,pageSize,round,teamId"
+POST,/est/md/placeOrder,营销,"原材料商店下单, tc, 2021-07-19",✅ 订料,
+GET,/est/md/productList,营销,"产品库存列表, tc, 2021-07-22",,"currentPage,gameId,pageSize,round,ruleId,teamId"
+POST,/est/md/productSell,营销,"产品出售, tc, 2021-07-22",,
+POST,/est/md/receiveGoods,营销,"原料收货, tc, 2021-07-19",✅ 收货,
+POST,/est/md/receiveGoodsByRound,营销,按账期和原料分组收货,,
+GET,/est/md/ruleIsoList,营销,"ISO 认证规则, ysl, 2021-07-19",,"page,ruleId,size"
+GET,/est/md/ruleProductList,营销,"产品资质规则, ysl, 2021-07-28",,"page,ruleId,size"
+GET,/est/md/saleChannelList,营销,"渠道管理, ysl, 2021-07-19",✅ 渠道,"gameId,page,round,ruleId,size,teamId"
+GET,/est/md/stockList,营销,"原料库存列表, tc, 2021-07-19",✅ 材料库存,"currentPage,gameId,pageSize,round,teamId"
+POST,/est/md/stockSell,营销,"原料出售, tc, 2021-07-20",,
+POST,/est/rule/all/delete,规则相关操作,deleteAllRule,,ruleId
+POST,/est/rule/copy,规则相关操作,复制规则,,
+POST,/est/rule/delete,规则相关操作,删除规则,,
+GET,/est/rule/delete/check,规则相关操作,校验删除数据是否被关联,,"code,ids"
+GET,/est/rule/detail/english/list,规则相关操作,获取多个规则文件详情-英文,,"moduleCodes,ruleId"
+GET,/est/rule/detail/get,规则相关操作,获取规则详情和元数据,,"code,ruleId"
+GET,/est/rule/detail/list,规则相关操作,获取多个规则文件详情,,"moduleCodes,ruleId"
+GET,/est/rule/export,规则相关操作,exportRuleFile,,"ruleId,fileName"
+POST,/est/rule/import,规则相关操作,importRuleFile,,file
+GET,/est/rule/name/code/list,规则相关操作,获取规则列表,,
+GET,/est/rule/ref/list,规则相关操作,获取关联规则数据,,"code,refField,ruleId"
+GET,/est/rule/reload,规则相关操作,reloadRuleXml,,
+POST,/est/rule/save,规则相关操作,规则保存,,
+POST,/est/rule/save2,规则相关操作,规则保存,,
+GET,/est/cooOrderDistribution/checkSupplementaryOrder,订单分配详情表,查看是否可以补单,,"caseId,code,gameId,round,ruleId"
+GET,/est/cooOrderDistribution/getList,订单分配详情表,交付管理列表,✅ 交付列表,"gameId,round,ruleId,teamId"
+POST,/est/cooOrderDistribution/saveDelivery,订单分配详情表,交货,◐ 交付（报文已逆出）,productDevelopId
+POST,/est/cooOrderDistribution/supplementaryOrder,订单分配详情表,补单,,
+GET,/est/cooDealerOrderStorage/getDistributionList,订单申报储存表,已分配竞单列表,,"gameId,productCode,round,ruleId,teamId"
+GET,/est/cooDealerOrderStorage/getGroupList,订单申报储存表,小组下拉框,,gameId
+GET,/est/cooDealerOrderStorage/getList,订单申报储存表,已申报竞单列表,✅ 已申报竞单,"gameId,round,ruleId,teamId"
+GET,/est/cooDealerOrderStorage/getProductList,订单申报储存表,产品下拉框,,ruleId
+POST,/est/cooDealerOrderStorage/saveOrder,订单申报储存表,申报订单,✅ 竞单申报（正确接口）,"createTime,creator,declareNum,id,isoId,modifier,modifyTime,orderSerial,quote,referencePrice,teamId"
+GET,/est/cfo/budgetList,财务,"上一回合预算列表, tc, 2021-07-13",✅ 预算读,"gameId,round,teamId"
+POST,/est/cfo/inputBudget,财务,"录入预算, tc, 2021-07-13",✅ 预算写（必须 query）,
+GET,/est/rule/discount/getById,贴现规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/cfoLoanDetail/getCfo,贷款明细表,查询财务决策复盘,,"gameId,teamId,year"
+GET,/est/cfoLoanDetail/getCoo,贷款明细表,查询营销决策复盘,,"gameId,ruleId,teamId,year"
+GET,/est/cfoLoanDetail/getCooDetail,贷款明细表,查询营销决策复盘-明细,,"gameId,quarter,ruleId,teamId,year"
+GET,/est/cfoLoanDetail/getLoan,贷款明细表,查询融资决策复盘,,"gameId,teamId,year"
+GET,/est/cfoLoanDetail/getLoanDetail,贷款明细表,查询融资决策复盘-明细,,"gameId,loanCash,loanId,round,startTime,teamId"
+GET,/est/ruleLoan/getFinanceRule,贷款规则,融资规则,,ruleId
+GET,/est/cfoLoan/getLoanList,贷款记录表,融资现状,✅ 贷款列表,"gameId,round,ruleId,teamId"
+POST,/est/cfoLoan/saveLoan,贷款记录表,融资决策,✅ 借款,
+POST,/est/cfoAccountsPayment/allPaymentCash,费用缴纳记录表,批量缴费,,
+POST,/est/cfoAccountsPayment/batchPaymentRates,费用缴纳记录表,批量还息,,
+POST,/est/cfoAccountsPayment/paymentCash,费用缴纳记录表,缴纳费用,✅ 缴管理费,feeDesc
+GET,/est/ruleFee/getFeeList,费用规则,费用管理列表,✅ 管理费规则,"gameId,round,ruleId,teamId"
+GET,/est/rule/disposal-assets/getById,资产处理规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/dataBanlanceSheet/checkBankruptcyState,资产负债表,获取资产负债表,,"gameId,round,teamId"
+POST,/est/dataBanlanceSheet/clickBankruptcy,资产负债表,点击破产,,
+GET,/est/dataBanlanceSheet/getBankruptcyState,资产负债表,获取破产状态,,"gameId,round,ruleId,teamId,userId"
+GET,/est/dataBanlanceSheet/getDataBanlanceSheet,资产负债表,获取资产负债表,✅ 资产负债表,"gameId,round,teamId"
+GET,/est/dataBanlanceSheet/trainBar,资产负债表,实训实时权益柱图,,"gameId,round"
+GET,/est/cooMenuNumber/menuCondition,选单次数详情表,查询当前选单情况（教师端）,,"gameId,menuTime,round,ruleId"
+GET,/est/cooMenuNumber/menuConditionStudent,选单次数详情表,查询当前选单情况（学生端）,,"gameId,round,ruleId,userId"
+POST,/est/cooMenuNumber/reMenu,选单次数详情表,重新选单,,
+POST,/est/cooMenuNumber/restoreMenu,选单次数详情表,恢复选单,,
+POST,/est/cooMenuNumber/selectOrder,选单次数详情表,选单/放弃,,"awareness,orderId"
+POST,/est/cooMenuNumber/suspendedMenu,选单次数详情表,暂停选单,,
+GET,/est/rule/retail-market/getById,零售市场规则,"简要说明, wangye, 2021-07-15",,id
+GET,/est/data/budget/getById,预算控制信息表,"简要说明, tc, 2021-07-14",,id
+POST,/est/riskMonitoring/getDetails,风险监控,风险监控-详情,,
+GET,/est/riskMonitoring/getRiskLevel,风险监控,风险监控-风险等级,,"gameId,round,teamId"
